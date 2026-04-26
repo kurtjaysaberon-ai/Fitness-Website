@@ -1,229 +1,531 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #1f1f1f;
-    background: #ffffff;
-    overflow-x: hidden;
-}
-
-/* NAV */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    z-index: 1000;
-    transition: 0.3s ease;
-}
-
-nav.scrolled {
-    background: rgba(10, 10, 10, 0.95);
-    padding: 0.6rem 0;
-}
-
-.nav-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #ff5a1f;
-    text-decoration: none;
-    letter-spacing: -0.5px;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    opacity: 0.85;
-    transition: 0.2s;
-}
-
-.nav-links a:hover {
-    opacity: 1;
-    color: #ff5a1f;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    background: radial-gradient(circle at top, #1a1a1a, #000);
-}
-
-.hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    opacity: 0.85;
-    margin-top: 1rem;
-    max-width: 600px;
-    margin-inline: auto;
-}
-
-/* BUTTON */
-.cta-button {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.9rem 2rem;
-    border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(135deg, #ff5a1f, #ff9a3c);
-    transition: 0.3s ease;
-    box-shadow: 0 10px 30px rgba(255, 90, 31, 0.25);
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(255, 90, 31, 0.35);
-}
-
-/* SECTIONS */
-section {
-    padding: 5rem 1.5rem;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    font-size: 2.3rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    letter-spacing: -0.5px;
-}
-
-/* FEATURES */
-.features {
-    background: #f7f7f8;
-    border-radius: 30px;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-6px);
-}
-
-/* PROGRAMS */
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-}
-
-.program-card {
-    border-radius: 18px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.program-card:hover {
-    transform: translateY(-6px);
-}
-
-.program-image {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #ff5a1f, #4f46e5);
-    color: white;
-    font-size: 2.5rem;
-}
-
-.program-content {
-    padding: 1.5rem;
-}
-
-.program-price {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ff5a1f;
-    margin-top: 0.5rem;
-}
-
-/* TESTIMONIALS */
-.testimonials {
-    background: #f7f7f8;
-    border-radius: 30px;
-}
-
-.testimonial {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* CTA */
-.cta-section {
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #ff5a1f, #ff9a3c);
-    border-radius: 30px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 2.5rem;
-    color: #888;
-    font-size: 0.9rem;
-}
-
-/* ANIMATION */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+‎
+‎```html
+‎<!DOCTYPE html>
+‎<html lang="en">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>FitForge - Transform Your Body</title>
+‎    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+‎    <style>
+‎        * {
+‎            margin: 0;
+‎            padding: 0;
+‎            box-sizing: border-box;
+‎        }
+‎
+‎        body {
+‎            font-family: 'Arial', sans-serif;
+‎            line-height: 1.6;
+‎            color: #333;
+‎            overflow-x: hidden;
+‎        }
+‎
+‎        /* Navigation */
+‎        nav {
+‎            position: fixed;
+‎            top: 0;
+‎            width: 100%;
+‎            background: rgba(0, 0, 0, 0.95);
+‎            padding: 1rem 0;
+‎            z-index: 1000;
+‎            transition: all 0.3s ease;
+‎        }
+‎
+‎        nav.scrolled {
+‎            background: rgba(0, 0, 0, 1);
+‎            padding: 0.5rem 0;
+‎        }
+‎
+‎        .nav-container {
+‎            max-width: 1200px;
+‎            margin: 0 auto;
+‎            display: flex;
+‎            justify-content: space-between;
+‎            align-items: center;
+‎            padding: 0 2rem;
+‎        }
+‎
+‎        .logo {
+‎            font-size: 1.8rem;
+‎            font-weight: bold;
+‎            color: #ff6b35;
+‎            text-decoration: none;
+‎        }
+‎
+‎        .nav-links {
+‎            display: flex;
+‎            list-style: none;
+‎            gap: 2rem;
+‎        }
+‎
+‎        .nav-links a {
+‎            color: white;
+‎            text-decoration: none;
+‎            font-weight: 500;
+‎            transition: color 0.3s ease;
+‎        }
+‎
+‎        .nav-links a:hover {
+‎            color: #ff6b35;
+‎        }
+‎
+‎        .hamburger {
+‎            display: none;
+‎            flex-direction: column;
+‎            cursor: pointer;
+‎        }
+‎
+‎        .hamburger span {
+‎            width: 25px;
+‎            height: 3px;
+‎            background: white;
+‎            margin: 3px 0;
+‎            transition: 0.3s;
+‎        }
+‎
+‎        /* Hero Section */
+‎        .hero {
+‎            height: 100vh;
+‎            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+‎                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000" width="1200" height="800"/><path fill="%23ff6b35" opacity="0.1" d="M0 400Q300 200 600 400T1200 400V800H0z"/><path fill="%23006fff" opacity="0.1" d="M0 0Q400 200 800 0T1200 200V400H0z"/></svg>');
+‎            background-size: cover;
+‎            background-position: center;
+‎            display: flex;
+‎            align-items: center;
+‎            justify-content: center;
+‎            text-align: center;
+‎            color: white;
+‎        }
+‎
+‎        .hero-content h1 {
+‎            font-size: 4rem;
+‎            margin-bottom: 1rem;
+‎            animation: fadeInUp 1s ease;
+‎        }
+‎
+‎        .hero-content p {
+‎            font-size: 1.5rem;
+‎            margin-bottom: 2rem;
+‎            animation: fadeInUp 1s ease 0.2s both;
+‎        }
+‎
+‎        .cta-button {
+‎            display: inline-block;
+‎            background: linear-gradient(45deg, #ff6b35, #f7931e);
+‎            color: white;
+‎            padding: 1rem 2.5rem;
+‎            text-decoration: none;
+‎            border-radius: 50px;
+‎            font-weight: bold;
+‎            font-size: 1.2rem;
+‎            transition: transform 0.3s ease, box-shadow 0.3s ease;
+‎            animation: fadeInUp 1s ease 0.4s both;
+‎        }
+‎
+‎        .cta-button:hover {
+‎            transform: translateY(-3px);
+‎            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+‎        }
+‎
+‎        /* Sections */
+‎        section {
+‎            padding: 5rem 2rem;
+‎            max-width: 1200px;
+‎            margin: 0 auto;
+‎        }
+‎
+‎        h2 {
+‎            font-size: 3rem;
+‎            text-align: center;
+‎            margin-bottom: 3rem;
+‎            color: #333;
+‎        }
+‎
+‎        /* Features */
+‎        .features {
+‎            background: #f8f9fa;
+‎        }
+‎
+‎        .features-grid {
+‎            display: grid;
+‎            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+‎            gap: 2rem;
+‎            margin-top: 3rem;
+‎        }
+‎
+‎        .feature-card {
+‎            background: white;
+‎            padding: 2.5rem;
+‎            border-radius: 15px;
+‎            text-align: center;
+‎            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+‎            transition: transform 0.3s ease, box-shadow 0.3s ease;
+‎        }
+‎
+‎        .feature-card:hover {
+‎            transform: translateY(-10px);
+‎            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+‎        }
+‎
+‎        .feature-icon {
+‎            font-size: 3rem;
+‎            color: #ff6b35;
+‎            margin-bottom: 1rem;
+‎        }
+‎
+‎        /* Programs */
+‎        .programs-grid {
+‎            display: grid;
+‎            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+‎            gap: 2rem;
+‎            margin-top: 3rem;
+‎        }
+‎
+‎        .program-card {
+‎            background: white;
+‎            border-radius: 15px;
+‎            overflow: hidden;
+‎            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+‎            transition: transform 0.3s ease;
+‎        }
+‎
+‎        .program-card:hover {
+‎            transform: translateY(-5px);
+‎        }
+‎
+‎        .program-image {
+‎            height: 200px;
+‎            background: linear-gradient(45deg, #ff6b35, #006fff);
+‎            display: flex;
+‎            align-items: center;
+‎            justify-content: center;
+‎            color: white;
+‎            font-size: 4rem;
+‎        }
+‎
+‎        .program-content {
+‎            padding: 2rem;
+‎        }
+‎
+‎        .program-price {
+‎            font-size: 2rem;
+‎            font-weight: bold;
+‎            color: #ff6b35;
+‎            margin: 1rem 0;
+‎        }
+‎
+‎        /* Testimonials */
+‎        .testimonials {
+‎            background: #f8f9fa;
+‎        }
+‎
+‎        .testimonial-grid {
+‎            display: grid;
+‎            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+‎            gap: 2rem;
+‎            margin-top: 3rem;
+‎        }
+‎
+‎        .testimonial {
+‎            background: white;
+‎            padding: 2.5rem;
+‎            border-radius: 15px;
+‎            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+‎            text-align: center;
+‎        }
+‎
+‎        .stars {
+‎            color: #f7931e;
+‎            font-size: 1.5rem;
+‎            margin-bottom: 1rem;
+‎        }
+‎
+‎        /* CTA Section */
+‎        .cta-section {
+‎            background: linear-gradient(135deg, #ff6b35, #f7931e);
+‎            color: white;
+‎            text-align: center;
+‎        }
+‎
+‎        /* Footer */
+‎        footer {
+‎            background: #333;
+‎            color: white;
+‎            text-align: center;
+‎            padding: 3rem 2rem;
+‎        }
+‎
+‎        /* Animations */
+‎        @keyframes fadeInUp {
+‎            from {
+‎                opacity: 0;
+‎                transform: translateY(30px);
+‎            }
+‎            to {
+‎                opacity: 1;
+‎                transform: translateY(0);
+‎            }
+‎        }
+‎
+‎        /* Responsive */
+‎        @media (max-width: 768px) {
+‎            .hamburger {
+‎                display: flex;
+‎            }
+‎
+‎            .nav-links {
+‎                position: fixed;
+‎                left: -100%;
+‎                top: 70px;
+‎                flex-direction: column;
+‎                background-color: #000;
+‎                width: 100%;
+‎                text-align: center;
+‎                transition: 0.3s;
+‎                padding: 2rem 0;
+‎            }
+‎
+‎            .nav-links.active {
+‎                left: 0;
+‎            }
+‎
+‎            .hero-content h1 {
+‎                font-size: 2.5rem;
+‎            }
+‎
+‎            .hero-content p {
+‎                font-size: 1.2rem;
+‎            }
+‎
+‎            h2 {
+‎                font-size: 2rem;
+‎            }
+‎        }
+‎
+‎        /* Scroll animations */
+‎        .fade-in {
+‎            opacity: 0;
+‎            transform: translateY(30px);
+‎            transition: all 0.6s ease;
+‎        }
+‎
+‎        .fade-in.visible {
+‎            opacity: 1;
+‎            transform: translateY(0);
+‎        }
+‎    </style>
+‎</head>
+‎<body>
+‎    <!-- Navigation -->
+‎    <nav>
+‎        <div class="nav-container">
+‎            <a href="#" class="logo">FitForge</a>
+‎            <ul class="nav-links">
+‎                <li><a href="#home">Home</a></li>
+‎                <li><a href="#features">Features</a></li>
+‎                <li><a href="#programs">Programs</a></li>
+‎                <li><a href="#testimonials">Reviews</a></li>
+‎                <li><a href="#contact">Contact</a></li>
+‎            </ul>
+‎            <div class="hamburger">
+‎                <span></span>
+‎                <span></span>
+‎                <span></span>
+‎            </div>
+‎        </div>
+‎    </nav>
+‎
+‎    <!-- Hero Section -->
+‎    <section id="home" class="hero">
+‎        <div class="hero-content">
+‎            <h1>Transform Your Body</h1>
+‎            <p>Join thousands who’ve achieved their dream physique with our proven training programs</p>
+‎            <a href="#programs" class="cta-button">Start Your Journey</a>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- Features Section -->
+‎    <section id="features" class="features">
+‎        <h2>Why Choose FitForge?</h2>
+‎        <div class="features-grid">
+‎            <div class="feature-card fade-in">
+‎                <div class="feature-icon">
+‎                    <i class="fas fa-dumbbell"></i>
+‎                </div>
+‎                <h3>Expert Trainers</h3>
+‎                <p>Certified professionals with 10+ years experience designing personalized programs</p>
+‎            </div>
+‎            <div class="feature-card fade-in">
+‎                <div class="feature-icon">
+‎                    <i class="fas fa-mobile-alt"></i>
+‎                </div>
+‎                <h3>24/7 Access</h3>
+‎                <p>Train anywhere, anytime with our mobile app and online workout library</p>
+‎            </div>
+‎            <div class="feature-card fade-in">
+‎                <div class="feature-icon">
+‎                    <i class="fas fa-users"></i>
+‎                </div>
+‎                <h3>Community</h3>
+‎                <p>Join our supportive community of 50K+ members motivating each other daily</p>
+‎            </div>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- Programs Section -->
+‎    <section id="programs" class="programs">
+‎        <h2>Our Training Programs</h2>
+‎        <div class="programs-grid">
+‎            <div class="program-card fade-in">
+‎                <div class="program-image">
+‎                    <i class="fas fa-weight-hanging"></i>
+‎                </div>
+‎                <div class="program-content">
+‎                    <h3>Strength Builder</h3>
+‎                    <p>12-week program for maximum muscle growth and strength gains</p>
+‎                    <div class="program-price">$97</div>
+‎                    <a href="#" class="cta-button" style="width: 100%; text-align: center; padding: 1rem;">Get Started</a>
+‎                </div>
+‎            </div>
+‎            <div class="program-card fade-in">
+‎                <div class="program-image">
+‎                    <i class="fas fa-fire"></i>
+‎                </div>
+‎                <div class="program-content">
+‎                    <h3>Fat Burner</h3>
+‎                    <p>8-week HIIT + nutrition plan to shred fat and reveal definition</p>
+‎                    <div class="program-price">$79</div>
+‎                    <a href="#" class="cta-button" style="width: 100%; text-align: center; padding: 1rem;">Get Started</a>
+‎                </div>
+‎            </div>
+‎            <div class="program-card fade-in">
+‎                <div class="program-image">
+‎                    <i class="fas fa-heartbeat"></i>
+‎                </div>
+‎                <div class="program-content">
+‎                    <h3>Total Transformation</h3>
+‎                    <p>16-week complete physique overhaul with coaching support</p>
+‎                    <div class="program-price">$197</div>
+‎                    <a href="#" class="cta-button" style="width: 100%; text-align: center; padding: 1rem;">Get Started</a>
+‎                </div>
+‎            </div>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- Testimonials Section -->
+‎    <section id="testimonials" class="testimonials">
+‎        <h2>What Our Members Say</h2>
+‎        <div class="testimonial-grid">
+‎            <div class="testimonial fade-in">
+‎                <div class="stars">
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                </div>
+‎                <p>"Lost 25lbs in 3 months! Best decision I ever made."</p>
+‎                <h4>- Sarah K.</h4>
+‎            </div>
+‎            <div class="testimonial fade-in">
+‎                <div class="stars">
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                </div>
+‎                <p>"Gained 15lbs of muscle in 12 weeks. Workouts are incredible!"</p>
+‎                <h4>- Mike R.</h4>
+‎            </div>
+‎            <div class="testimonial fade-in">
+‎                <div class="stars">
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                    <i class="fas fa-star"></i>
+‎                </div>
+‎                <p>"Finally found a program that works for my busy schedule."</p>
+‎                <h4>- Emily T.</h4>
+‎            </div>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- CTA Section -->
+‎    <section id="contact" class="cta-section">
+‎        <h2>Ready to Transform?</h2>
+‎        <p>Join 50,000+ members crushing their fitness goals</p>
+‎        <a href="#" class="cta-button" style="background: white; color: #ff6b35; margin-top: 2rem;">Start Free Trial</a>
+‎    </section>
+‎
+‎    <!-- Footer -->
+‎    <footer>
+‎        <p>&copy; 2024 FitForge. All rights reserved. | Transform Your Body Today</p>
+‎    </footer>
+‎
+‎    <script>
+‎        // Mobile Navigation
+‎        const hamburger = document.querySelector('.hamburger');
+‎        const navLinks = document.querySelector('.nav-links');
+‎
+‎        hamburger.addEventListener('click', () => {
+‎            navLinks.classList.toggle('active');
+‎        });
+‎
+‎        // Navbar scroll effect
+‎        window.addEventListener('scroll', () => {
+‎            const nav = document.querySelector('nav');
+‎            if (window.scrollY > 100) {
+‎                nav.classList.add('scrolled');
+‎            } else {
+‎                nav.classList.remove('scrolled');
+‎            }
+‎        });
+‎
+‎        // Smooth scrolling for navigation links
+‎        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+‎            anchor.addEventListener('click', function (e) {
+‎                e.preventDefault();
+‎                const target = document.querySelector(this.getAttribute('href'));
+‎                if (target) {
+‎                    target.scrollIntoView({
+‎                        behavior: 'smooth',
+‎                        block: 'start'
+‎                    });
+‎                }
+‎                navLinks.classList.remove('active');
+‎            });
+‎        });
+‎
+‎        // Scroll animations
+‎        const observerOptions = {
+‎            threshold: 0.1,
+‎            rootMargin: '0px 0px -50px 0px'
+‎        };
+‎
+‎        const observer = new IntersectionObserver((entries) => {
+‎            entries.forEach(entry => {
+‎                if (entry.isIntersecting) {
+‎                    entry.target.classList.add('visible');
+‎                }
+‎            });
+‎        }, observerOptions);
+‎
+‎        document.querySelectorAll('.fade-in').forEach(el => {
+‎            observer.observe(el);
+‎        });
+‎
+‎        // Parallax effect for hero
+‎        window.addEventListener('scroll', () => {
+‎            const scrolled = window.pageYOffset;
+‎            const hero = document.querySelector('.hero');
+‎            const speed = scrolled * 0.5;
+‎            hero.style.transform = `translateY(${speed}px)`;
+‎        });
+‎    </script>
+‎</body>
+‎</html>
+‎```
+‎
